@@ -1,0 +1,555 @@
+.popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 99;
+    display: none;
+}
+
+.popup1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 300px auto 0 auto;
+    width: 473px;
+    height: 224px;
+    background-color: #050624;
+    color: #000;
+    z-index: 9999;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+}
+
+.popup-error {
+    border: 1px solid #ff0505;
+    border-radius: 20px;
+    color: #ff0505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 5px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.popup-error p {
+    margin-bottom: 0;
+}
+
+.usernameQueryResult {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.yakor {
+    position: absolute;
+    top: -63px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.closePayments1,.closePayments2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.popup-content {
+    display: flex;
+    align-items: center;
+}
+
+.popup-content input {
+    width: 305px;
+    height: 47px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-left: 22px;
+}
+
+.popup-content button {
+    height: 51px;
+    width: 51px;
+    border-radius: 50px;
+    border: none;
+    margin-left: 13px;
+    background-color: #5d00ac;
+    box-shadow: 0 0 25px rgba(93,0,172,1);
+    transition: all .2s ease;
+}
+
+.popup-content button:hover {
+    background-color: #44027e;
+    box-shadow: 0 0 25px rgb(66, 1, 122);
+}
+
+.popup2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 300px auto 0 auto;
+    width: 680px;
+    height: 470px;
+    background-color: #050624;
+    color: #000;
+    z-index: 9999;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    display: none;
+}
+
+.popup2-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 385px;
+    overflow: auto;
+    /*padding-top: 80px;*/
+}
+
+.nopayments {
+    font-size: 26px;
+    color: #9c9c9d;
+    position: relative;
+    /*display: none;*/
+}
+
+.nopayments::before {
+    content: '';
+    position: absolute;
+    width: 139px;
+    height: 1px;
+    background-color: #3f3f52;
+    left: -150px;
+    top: 20px;
+}
+
+.nopayments::after {
+    content: '';
+    position: absolute;
+    width: 139px;
+    height: 1px;
+    background-color: #3f3f52;
+    right: -150px;
+    top: 20px;
+}
+
+.payments {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+}
+
+.payment {
+    color: #9c9c9d;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #131550;
+    box-sizing: border-box;
+    padding-bottom: 18px;
+    margin-top: 18px;
+}
+
+.payment p {
+    margin: 0;
+}
+
+.payment-number {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-right: 2.5%;
+    word-break: break-word;
+    width: 20%;
+}
+
+.payment-bill {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-right: 2.5%;
+    word-break: break-word;
+    width: 10%;
+}
+
+.payment-date {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-right: 2.5%;
+    word-break: break-word;
+    width: 20%;
+}
+
+.payment-username {
+    font-size: 17px;
+    margin-right: 2.5%;
+    word-break: break-word;
+    width: 20%;
+}
+
+.payment-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #fff;
+    /*height: 27px;*/
+    /*width: 78px;*/
+    background-color: #de2450;
+    border-radius: 5px;
+    margin-right: 2.5%;
+    word-break: break-word;
+    width: 20%;
+    padding: 5px;
+
+}
+
+.payment-status p {
+    margin: 0;
+}
+
+.payment-action button {
+    font-size: 12px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    width: 110px;
+    height: 30px;
+    background-color: #ff6600;
+    word-break: break-word;
+}
+
+.payment-action {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    background-color: #5d00ac;
+    box-shadow: 0 0 25px rgba(93,0,172,1);
+    transition: all .2s ease;
+    color: #fff !important;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.nav-btn:hover {
+    background-color: #44027e;
+}
+
+@media all and (max-width: 991px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 280px !important;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .popup1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 170px auto 0 auto;
+        width: 380px;
+        height: 180px;
+        background-color: #050624;
+        color: #000;
+        z-index: 9999;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        
+    }
+    
+    .popup-content input {
+        width: 275px;
+        height: 47px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding-left: 22px;
+    }
+    
+    .popup-content button {
+        height: 51px;
+        width: 51px;
+        border-radius: 50px;
+        border: none;
+        margin-left: 13px;
+        background-color: #5d00ac;
+        box-shadow: 0 0 25px rgba(93,0,172,1);
+    }
+    
+    .yakor {
+        position: absolute;
+        top: -75px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    
+    .popup2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 130px auto 0 auto;
+        width: 380px;
+        height: 450px;
+        background-color: #050624;
+        color: #000;
+        z-index: 9999;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+        display: none;
+    }
+    
+    .popup2-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 350px;
+        overflow: auto;
+        padding-top: 300px;
+    }
+    
+    .nopayments {
+        font-size: 18px;
+        color: #9c9c9d;
+        position: relative;
+        margin-bottom: 80px;
+    }
+    
+    .nopayments::before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        background-color: #3f3f52;
+        left: -60px;
+        top: 12px;
+    }
+    
+    .nopayments::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        background-color: #3f3f52;
+        right: -60px;
+        top: 12px;
+    }
+    
+    .payment {
+        color: #9c9c9d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #131550;
+        box-sizing: border-box;
+        padding-bottom: 18px;
+        margin-top: 18px;
+    }
+    
+    .payment-number {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .payment-bill {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .payment-date {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .payment-status {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .payment-status p {
+        margin: 0;
+    }
+    
+    .payment-action button {
+        font-size: 12px;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        width: 110px;
+        height: 30px;
+        background-color: #ff6600;
+        margin-bottom: 10px;
+    }
+    
+}
+
+@media all and (max-width: 375px) {
+    .popup1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 170px auto 0 auto;
+        width: 350px;
+        height: 180px;
+        background-color: #050624;
+        color: #000;
+        z-index: 9999;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        
+    }
+    
+    .popup-content input {
+        width: 230px;
+        height: 47px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding-left: 22px;
+    }
+    
+    .popup-content button {
+        height: 51px;
+        width: 51px;
+        border-radius: 50px;
+        border: none;
+        margin-left: 13px;
+        background-color: #5d00ac;
+        box-shadow: 0 0 25px rgba(93,0,172,1);
+    }
+    
+    .yakor {
+        position: absolute;
+        top: -75px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 360px) {
+    .popup1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 170px auto 0 auto;
+        width: 280px;
+        height: 170px;
+        background-color: #050624;
+        color: #000;
+        z-index: 9999;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        
+    }
+    
+    .popup-content input {
+        width: 180px;
+        height: 47px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding-left: 22px;
+    }
+    
+    .popup-content button {
+        height: 51px;
+        width: 51px;
+        border-radius: 50px;
+        border: none;
+        margin-left: 13px;
+        background-color: #5d00ac;
+        box-shadow: 0 0 25px rgba(93,0,172,1);
+    }
+    
+    .yakor {
+        position: absolute;
+        top: -75px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    
+    .popup2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 130px auto 0 auto;
+        width: 300px;
+        height: 450px;
+        background-color: #050624;
+        color: #000;
+        z-index: 9999;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+        display: none;
+    }
+}
